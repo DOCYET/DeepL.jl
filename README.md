@@ -20,7 +20,7 @@ translate_text(text, "EN", "DE")
 # "Guten Morgen, ich hätte gerne einen Tee und ein Stück Kuchen"
 ```
 
-or translate several text with a single API call
+or translate several texts with a single API call
 ```julia
 texts = [
     "Good morning, I would like a tea and some cake",
