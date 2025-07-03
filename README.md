@@ -1,4 +1,4 @@
-# DeepLSDK.jl
+# DeepL.jl
 
 DeepL SDK in Julia. The package currently implements only the most basic functionality: translating a string of text. 
 

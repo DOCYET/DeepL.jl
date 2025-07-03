@@ -1,4 +1,4 @@
-module DeepLSDK
+module DeepL
 
 # External dependencies
 # ---------------------

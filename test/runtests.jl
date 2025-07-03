@@ -1,7 +1,7 @@
 using Test
-using DeepLSDK
+using DeepL
 
-@testset "DeepLSDK Module Tests" begin
+@testset "DeepL Module Tests" begin
 
     @testset "translate_text" begin
         @testset "single text" begin

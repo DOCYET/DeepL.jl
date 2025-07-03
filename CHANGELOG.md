@@ -4,7 +4,7 @@
 ## [0.1.0] - 2025-06-03
  
 ### Added
-- chore: initial release of the DeepLSDK.jl package.
+- chore: initial release of the DeepL.jl package.
 - feat: `translate_text` function for translating a single string of text.
 - feat: `translate_text` function for translating multiple strings of text.
 
