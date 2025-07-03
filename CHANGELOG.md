@@ -1,6 +1,15 @@
 # Changelog
 
- 
+
+## [0.2.0] - 2025-06-03
+
+No breaking changes 
+
+### Added 
+- feat: add alternative syntax for `translate_text` using a `Pair{String, String}` to specify the source and target languages
+- feat: add alternative syntax that requires to only specify the target langauge, allowing DeepL to infer the source language
+- feat: GitHub Actions pipeline with Unit Testing
+
 ## [0.1.0] - 2025-06-03
  
 ### Added
