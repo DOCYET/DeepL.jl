@@ -1,6 +1,8 @@
-# DeepL.jl
+# DeepLSDK.jl
 
-DeepL SDK in Julia. The package currently implements only the most basic functionality: translating a string of text.
+DeepL SDK in Julia. The package currently implements only the most basic functionality: translating a string of text. 
+
+
 
 ## Setup 
 You need to define the enviroment variable `DEEPL_API_KEY`.
@@ -35,3 +37,7 @@ translate_text(texts, "EN", "DE")
 # "Ich bin sooo müde, Mann..."
 
 ```
+
+## Resources 
+
+-  [Deep API documentation](https://developers.deepl.com/docs/getting-started/intro).

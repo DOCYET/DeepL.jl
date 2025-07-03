@@ -1,14 +1,10 @@
 # Changelog
 
-## [0.1.1] - 2025-06-03
-
-### Fixed 
-- rename: repo from DeepL to DeepL.jl
-  
+ 
 ## [0.1.0] - 2025-06-03
  
 ### Added
-- chore: initial release of the DeepL.jl package.
+- chore: initial release of the DeepLSDK.jl package.
 - feat: `translate_text` function for translating a single string of text.
 - feat: `translate_text` function for translating multiple strings of text.
 
