@@ -13,4 +13,4 @@ using DeepLSDK
             @test translate_text(["Hallo", "Welt"], "DE", "EN") == ["Hello", "World"]
         end
     end
-end 
+end

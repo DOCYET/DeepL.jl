@@ -10,9 +10,9 @@ Handle errors from the DeepL API response.
 - `String`: An error message if an error occurred, otherwise an empty string.
 """
 function handle_api_error(response::HTTP.Response)
-	if response.status != 200
-		error_info = JSON.parse(String(response.body))
-		return "Error: " * get(error_info, "message", "Unknown error")
-	end
-	return ""
+    if response.status != 200
+        error_info = JSON.parse(String(response.body))
+        return "Error: " * get(error_info, "message", "Unknown error")
+    end
+    return ""
 end
