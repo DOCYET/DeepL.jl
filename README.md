@@ -2,19 +2,26 @@
 
 DeepL SDK in Julia. The package currently implements only the most basic functionality: translating a string of text.
 
+## Setup 
+You need to define the enviroment variable `DEEPL_API_KEY`.
 
 ## Usage 
-The library can be used as follows: 
-
-```julia 
+Import the package 
+```julia
 using DeepL
+```
 
+Translate a single text
+
+```julia
 text = "Good morning, I would like a tea and some cake";
 
 translate_text(text, "EN", "DE")
 # "Guten Morgen, ich hätte gerne einen Tee und ein Stück Kuchen"
+```
 
-
+or translate several text with a single API call
+```julia
 texts = [
     "Good morning, I would like a tea and some cake",
     "How are you doing today?",
