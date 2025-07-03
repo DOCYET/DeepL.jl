@@ -40,4 +40,4 @@ translate_text(texts, "EN", "DE")
 
 ## Resources 
 
--  [Deep API documentation](https://developers.deepl.com/docs/getting-started/intro).
+-  [DeepL API documentation](https://developers.deepl.com/docs/getting-started/intro).
