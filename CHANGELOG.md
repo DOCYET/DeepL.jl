@@ -2,7 +2,9 @@
 
 ## [0.3.0] - 2026-02-19
 
-No breaking changes
+### Breaking changes
+- `translate_text` now throws an `ErrorException` on API errors instead of returning an error message string. Code that checked return values for error strings should be updated to use `try`/`catch` blocks instead.
+- `handle_api_error` now throws on failure and returns `nothing` on success, instead of returning an error string or empty string.
 
 ### Added
 - feat: `detect_language` function for detecting the language of a single string of text
