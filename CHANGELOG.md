@@ -1,5 +1,17 @@
 # Changelog
 
+## [0.3.0] - 2026-02-19
+
+No breaking changes
+
+### Added
+- feat: `detect_language` function for detecting the language of a single string of text
+- feat: `detect_language` function for detecting the language of multiple strings of text
+- feat: `get_languages` function to retrieve the list of supported source or target languages from the DeepL API
+- feat: `CLAUDE.md` file
+
+### Notes
+Since the DeepL API does not provide a dedicated language detection endpoint, `detect_language` uses the translate endpoint internally and extracts the `detected_source_language` field from the response.
 
 ## [0.2.0] - 2025-06-03
 
