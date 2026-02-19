@@ -16,7 +16,9 @@ const Optional{T} = Union{T, Nothing}
 # ---------------
 include("client.jl")
 include("translate.jl")
-export translate_text
+include("detect.jl")
+include("languages.jl")
+export translate_text, detect_language, get_languages
 
 """
 	__init__()

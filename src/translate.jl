@@ -112,10 +112,7 @@ function translate_text(
 	!isnothing(source_lang) && (body["source_lang"] = source_lang)
 
 	response = post_request("/translate", body)
-	error_message = handle_api_error(response)
-	if !isempty(error_message)
-		return error_message
-	end
+	handle_api_error(response)
 	result = JSON.parse(String(response.body))
 	return result["translations"][1]["text"]
 end
@@ -145,19 +142,16 @@ function translate_text(
 	(isempty(text) || source_lang == target_lang) && return text
 
 	# guard: check if the source and target languages are supported
-	!isnothing(source_lang) && !in(source_lang, SUPPORTED_SOURCE_LANGUAGES) && 
+	!isnothing(source_lang) && !in(source_lang, SUPPORTED_SOURCE_LANGUAGES) &&
 		throw(ArgumentError("source language '$source_lang' is not supported"))
-	!in(target_lang, SUPPORTED_TARGET_LANGUAGES) && 
+	!in(target_lang, SUPPORTED_TARGET_LANGUAGES) &&
 		throw(ArgumentError("target language '$target_lang' is not supported"))
 
 	body = Dict("text" => text, "target_lang" => target_lang)
 	!isnothing(source_lang) && (body["source_lang"] = source_lang)
 
 	response = post_request("/translate", body)
-	error_message = handle_api_error(response)
-	if !isempty(error_message)
-		return [error_message]
-	end
+	handle_api_error(response)
 	result = JSON.parse(String(response.body))
 	return [t["text"] for t in result["translations"]]
 end
