@@ -19,9 +19,6 @@ function get_languages(type::String="source")
 	type in ("source", "target") || throw(ArgumentError("type must be \"source\" or \"target\", got \"$type\""))
 
 	response = get_request("/languages"; params=Dict("type" => type))
-	error_message = handle_api_error(response)
-	if !isempty(error_message)
-		return error_message
-	end
+	handle_api_error(response)
 	return JSON.parse(String(response.body))
 end

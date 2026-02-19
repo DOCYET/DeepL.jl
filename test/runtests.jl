@@ -15,6 +15,13 @@ using DeepL
             @test translate_text(["Hallo", "Welt"], "DE" => "EN") == ["Hello", "World"]
             @test translate_text(["Hallo", "Welt"], "ES") == ["Hola", "Mundo"]
         end
+
+        @testset "invalid languages" begin
+            @test_throws ArgumentError translate_text("Hallo", "XX", "EN")
+            @test_throws ArgumentError translate_text("Hallo", "DE", "XX")
+            @test_throws ArgumentError translate_text(["Hallo"], "XX", "EN")
+            @test_throws ArgumentError translate_text(["Hallo"], "DE", "XX")
+        end
     end
 
     @testset "detect_language" begin

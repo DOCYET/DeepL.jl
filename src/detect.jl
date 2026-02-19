@@ -22,10 +22,7 @@ function detect_language(text::AbstractString)
 	body = Dict("text" => [text], "target_lang" => "EN")
 
 	response = post_request("/translate", body)
-	error_message = handle_api_error(response)
-	if !isempty(error_message)
-		return error_message
-	end
+	handle_api_error(response)
 	result = JSON.parse(String(response.body))
 	return result["translations"][1]["detected_source_language"]
 end
@@ -47,10 +44,7 @@ function detect_language(text::Vector{<:AbstractString})
 	body = Dict("text" => text, "target_lang" => "EN")
 
 	response = post_request("/translate", body)
-	error_message = handle_api_error(response)
-	if !isempty(error_message)
-		return [error_message]
-	end
+	handle_api_error(response)
 	result = JSON.parse(String(response.body))
 	return [t["detected_source_language"] for t in result["translations"]]
 end
